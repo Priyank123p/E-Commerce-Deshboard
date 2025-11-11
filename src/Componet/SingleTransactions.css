@@ -1,0 +1,305 @@
+.SingleTransactions-page {
+    background-color: #f8f9fb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.SingleTransactions-heading h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.SingleTransactions-id {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.SingleTransactions-text {
+    gap: 20px;
+    align-items: center;
+}
+
+.SingleTransactions-text h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.SingleTransactions-text p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.SingleTransactions-button {
+    gap: 10px;
+}
+
+.SingleTransactions-button button {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.SingleTransactions-button button:first-child {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.SingleTransactions-button button:first-child:hover {
+    background: #0069d9;
+}
+
+.SingleTransactions-button button:last-child {
+    background: #ff4d4f;
+    color: #fff;
+    border-color: #ff4d4f;
+}
+
+.SingleTransactions-button button:last-child:hover {
+    background: #e03e3f;
+}
+
+/* *******************Left-Side************************ */
+.Order-Details {
+    gap: 30px;
+}
+
+.Order-Table {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.Order-Table h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ececec;
+    padding-bottom: 10px;
+}
+
+.Order-Data {
+    overflow-x: auto;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.invoice-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.invoice-table th,
+.invoice-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.invoice-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.invoice-table tbody tr:hover {
+    background-color: #e9f4ff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.invoice-table td.fw-semibold {
+    font-weight: 600;
+    color: #333;
+}
+
+.invoice-table th {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .Order-Table {
+        padding: 20px;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .Order-Table h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* *******************Right-side-Customer-Details******************* */
+.Customer-Details {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-top: 20px;
+    max-width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.Customer-Details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #f3f4f6;
+    padding: 10px 0;
+}
+
+.detail-row:first-of-type {
+    border-top: none;
+}
+
+.label {
+    color: #374151;
+    font-weight: 500;
+    font-size: 14px;
+    width: 35%;
+}
+
+.value {
+    color: #111827;
+    font-size: 14px;
+    width: 60%;
+    text-align: right;
+    word-break: break-word;
+}
+
+/* ***********************Order-History****************** */
+.Order-History {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Poppins", sans-serif;
+}
+
+.Order-History h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    border-left: 2px dashed #ccc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e293b;
+    position: absolute;
+    left: -40px;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content .title {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+}
+
+.timeline-content .subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 2px 0 0 0;
+}
+
+.timeline-time {
+    text-align: right;
+    font-size: 12px;
+    color: #64748b;
+    min-width: 80px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-buttons button:hover {
+    background: #f1f5f9;
+}
+
+
+
+@media (max-width: 768px) {
+    .SingleTransactions-id {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .SingleTransactions-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .SingleTransactions-button {
+        justify-content: flex-start;
+    }
+}

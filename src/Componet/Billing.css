@@ -1,0 +1,61 @@
+.payment-page {
+    background-color: #f8f9fb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.billing-heading h3{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.payment-card {
+    border: 1px solid #e3e6ed;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    flex: 1 1 300px;
+    transition: all 0.2s ease;
+}
+
+.payment-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.billing-table th {
+    color: #323232;
+    font-weight: 600;
+}
+
+.billing-table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.card {
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+}
+
+.btn {
+    border-radius: 8px !important;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}

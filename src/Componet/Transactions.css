@@ -1,0 +1,140 @@
+.Transactions-page {
+    background-color: #f8f9fb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Transactions-heading h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Transactions-table-heading {
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.Transactions-table-heading h2 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.Transactions-table-heading p {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(170, 170, 170);
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-color: #b3b3b3;
+}
+
+.btn-outline-secondary {
+    border-color: #dcdcdc;
+    color: #333;
+}
+
+.Transactions-table-data {
+    background: #fff;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.order-table th,
+.order-table td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.order-table thead th {
+    color: #666;
+    font-size: 13.5px;
+    font-weight: 600;
+    background: #fafafa;
+}
+
+.order-table thead tr {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.order-table tbody tr:hover {
+    background-color: #f9fafc;
+}
+
+.order-id {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.customer-name {
+    font-weight: 600;
+    color: #222;
+}
+
+.amount {
+    font-weight: 500;
+    color: #111;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.status.completed {
+    background-color: #e7f9ed;
+    color: #1a7f37;
+}
+
+.status.pending {
+    background-color: #fff4e5;
+    color: #e69500;
+}
+
+.status.failed {
+    background-color: #ffeaea;
+    color: #d63031;
+}
+
+.menu-icon {
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu-icon:hover {
+    color: #333;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .order-table th,
+    .order-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}

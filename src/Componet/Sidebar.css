@@ -1,0 +1,42 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    z-index: 1040;
+}
+
+/* Hide scrollbar visually but keep scroll */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+/* Hide sidebar on mobile */
+.sidebar.hide {
+    transform: translateX(-100%);
+}
+
+/* Show sidebar */
+.sidebar.show {
+    transform: translateX(0);
+}
+
+/* Add spacing for content area so it doesn't hide behind sidebar */
+@media (min-width: 768px) {
+    body {
+        padding-left: 250px;
+    }
+}

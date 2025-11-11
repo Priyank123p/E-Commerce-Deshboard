@@ -1,0 +1,63 @@
+.invoice-page {
+    background-color: #f8f9fb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.invoice-heading h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.overview-card {
+    border: 1px solid #e3e6ed;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #fff;
+    flex: 1 1 200px;
+    transition: all 0.2s ease;
+}
+
+.overview-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.112);
+}
+
+.overview-card h5 {
+    font-size: 15px;
+    color: rgb(187, 187, 187);
+}
+
+.overview-card p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.paid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.unpaid {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-badge.draft {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.btn.active {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-color: #0d6efd !important;
+}

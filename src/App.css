@@ -1,0 +1,58 @@
+.app-layout {
+    display: flex;
+    height: 100vh;
+    background-color: #f9fafb;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.topbar {
+    background: #fff;
+    height: 64px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.page-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9fafb;
+}
+
+/* Scrollbar Styling */
+.page-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.page-content::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}

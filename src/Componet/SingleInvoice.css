@@ -1,0 +1,89 @@
+.SingleInvoice-page {
+    background-color: #f8f9fb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: rgb(0, 0, 0);
+}
+
+.singleinvoice-heading h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card {
+    margin-top: 25px;
+    padding: 18px;
+}
+
+.Invoice h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Invoice p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h5 {
+    font-size: 13px;
+    color: rgb(61, 61, 61);
+}
+
+h4 {
+    font-size: 17px;
+    color: black;
+}
+
+p span {
+    font-size: 15px;
+    color: rgb(115, 115, 115);
+}
+
+p {
+    font-size: 15px;
+    color: black;
+}
+
+.To {
+    text-align: end;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.invoice-summary p,
+.invoice-summary h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.invoice-summary h5 {
+    font-size: 20px;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    border: none;
+}
+
+.btn-outline-primary {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3b82f6;
+    color: #fff;
+}

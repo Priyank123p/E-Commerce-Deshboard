@@ -1,0 +1,12 @@
+.profile-img {
+    transition: transform 0.2s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.hover-bg:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}

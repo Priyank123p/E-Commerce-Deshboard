@@ -1,0 +1,262 @@
+.Profile {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    margin-top: 25px;
+}
+
+.Profile h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* ********Profile-Details********** */
+.Profile-Details {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.profile-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: #0b2239;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon-facebook:hover {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.icon-twitter:hover {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.icon-linkedin:hover {
+    background-color: #0077b5;
+    color: #fff;
+}
+
+.icon-instagram:hover {
+    background-color: #e4405f;
+    color: #fff;
+}
+
+.edit-btn {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 50px;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0b2239;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background: #0b2239;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .profile-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* Personal Information */
+.Personal-Info-Card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.Personal-Info-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Personal-Info-Header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.edit-btn {
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 25px;
+    padding: 6px 16px;
+    color: #111827;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Personal-Info-Body {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 220px;
+}
+
+.info-item label {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.info-item p {
+    font-weight: 600;
+    color: #111827;
+    margin-top: 4px;
+}
+
+.profile-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-img {
+    transition: transform 0.2s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile-popup {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 8px 0;
+    width: 150px;
+    z-index: 10;
+}
+
+.profile-popup ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-popup li {
+    padding: 10px 15px;
+    transition: background 0.2s;
+}
+
+.profile-popup li:hover {
+    background: #f0f0f0;
+}
+
+.profile-popup a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Address */
+.Address {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.Address-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Address-Header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111827;
+}

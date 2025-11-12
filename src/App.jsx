@@ -14,6 +14,7 @@ import Transactions from "./Componet/Transactions";
 import TopBar from "./Componet/TopBar";
 import Form from "./Componet/Form";
 import UserProfile from "./Componet/UserProfile";
+import EditProfile from "./Componet/EditProfile";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/singletransactions" element={<SingleTransactions />} />
             <Route path="/form" element={<Form />} />
             <Route path="/userprofile" element={<UserProfile />} />
+            <Route path="/editprofile" element={<EditProfile />} />
           </Routes>
         </section>
       </main>

@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./UserProfile.css"
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa'
 import { FaInstagram, FaPen, FaTwitter } from 'react-icons/fa6'
 
 const UserProfile = () => {
+
+  const [profileImage, setProfileImage] = useState("public/Img/IMG_20220224_123836_029.jpg");
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setProfileImage(imageUrl);
+    }
+  };
+
   return (
     <div className='container UserProfile-page'>
       <div className="d-flex justify-content-between align-items-center Transactions-heading">
@@ -20,15 +31,36 @@ const UserProfile = () => {
         {/* Profile-Details */}
         <div className='Profile-Details d-flex'>
           <div className='profile-card'>
-            <div className='profile-left'>
-              <img
-                src="public/Img/IMG_20220224_123836_029.jpg"
-                alt="User"
-                className="profile-image"
+            <div className="profile-left">
+              {/* Hidden file input */}
+              <input
+                type="file"
+                id="imageUpload"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={handleImageChange}
               />
-              <div className='profile-info'>
-                <h4 className='profile-name'>Musharof Chowdhury</h4>
-                <p className='profile-role'>Team Manager <span>|</span> Arizona, United States</p>
+
+              <label htmlFor="imageUpload" style={{ cursor: "pointer" }}>
+                <img
+                  src={profileImage}
+                  alt="User"
+                  className="profile-image"
+                  style={{
+                    width: "120px",
+                    height: "120px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: "3px solid #ddd",
+                  }}
+                />
+              </label>
+
+              <div className="profile-info">
+                <h4 className="profile-name">Priyank Patel</h4>
+                <p className="profile-role">
+                  Team Manager <span>|</span> Arizona, United States
+                </p>
               </div>
             </div>
 
@@ -48,9 +80,11 @@ const UserProfile = () => {
                 </a>
               </div>
 
-              <button className='edit-btn'>
-                <i className='fas fa-pen'><FaPen /></i> Edit
-              </button>
+              <Link to="/editprofile">
+                <button className='edit-btn'>
+                  <i className='fas fa-pen'><FaPen /></i> Edit
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -59,20 +93,17 @@ const UserProfile = () => {
         <div className='Personal-Info-Card'>
           <div className='Personal-Info-Header'>
             <h3>Personal Information</h3>
-            <button className='edit-btn'>
-              <i className='fas fa-pen'><FaPen /></i> Edit
-            </button>
           </div>
 
           <div className='Personal-Info-Body'>
             <div className='info-row'>
               <div className='info-item'>
                 <label>First Name</label>
-                <p>Musharof</p>
+                <p>Priyank</p>
               </div>
               <div className='info-item'>
                 <label>Last Name</label>
-                <p>Chowdhury</p>
+                <p>Patel</p>
               </div>
             </div>
 
@@ -100,9 +131,6 @@ const UserProfile = () => {
         <div className='Address'>
           <div className='Address-Header'>
             <h3>Address</h3>
-            <button className='edit-btn'>
-              <i className='fas fa-pen'><FaPen /></i> Edit
-            </button>
           </div>
 
           <div className='Personal-Info-Body'>

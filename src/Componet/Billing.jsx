@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Billing.css";
 import { FaCcMastercard, FaCcVisa, FaPaypal, FaFilePdf, FaDownload, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import jsPDF from "jspdf";
 
 const Billing = () => {
   const invoices = [
@@ -13,6 +14,17 @@ const Billing = () => {
     { id: 16, month: "September 2024", date: "September 01, 2024", price: "$250.00", plan: "Pro Plan", status: "Paid" },
   ];
 
+  // Function to download a single invoice as PDF
+  const handleDownloadInvoice = (invoice) => {
+    const pdf = new jsPDF();
+    pdf.text(`Invoice #${invoice.id} – ${invoice.month}`, 20, 20);
+    pdf.text(`Date: ${invoice.date}`, 20, 30);
+    pdf.text(`Price: ${invoice.price}`, 20, 40);
+    pdf.text(`Plan: ${invoice.plan}`, 20, 50);
+    pdf.text(`Status: ${invoice.status}`, 20, 60);
+    pdf.save(`Invoice_${invoice.id}_${invoice.month}.pdf`);
+  };
+
   return (
     <div className="container payment-page">
       <div className="d-flex justify-content-between align-items-center mb-4 billing-heading">
@@ -21,6 +33,7 @@ const Billing = () => {
           <button className="btn home-btn">Home</button>
         </Link>
       </div>
+
       {/* Payment Methods Section */}
       <div className="card p-4 mb-4">
         <div className="d-flex justify-content-between align-items-center mb-3">
@@ -42,7 +55,7 @@ const Billing = () => {
             <p className="text-muted small mb-3">Expiry 01/24</p>
             <div className="d-flex gap-2">
               <button className="btn btn-outline-secondary btn-sm">Edit</button>
-              <button className="btn btn-outline-danger btn-sm">Dlete</button>
+              <button className="btn btn-outline-danger btn-sm">Delete</button>
             </div>
           </div>
 
@@ -80,13 +93,10 @@ const Billing = () => {
       {/* Invoices Section */}
       <div className="card p-4">
         <div className="d-flex justify-content-between align-items-center mb-3">
-          <h5 className="fw-bold">Invoices</h5>
-          <button className="btn btn-outline-dark btn-sm">
-            <FaDownload className="me-2" /> Download All
-          </button>
+          <h5 className="fw-bold fs-5">Invoices</h5>
         </div>
 
-        <table className="billing-table align-middle">
+        <table className="billing-table align-middle table table-borderless">
           <thead>
             <tr>
               <th>Name</th>
@@ -114,7 +124,10 @@ const Billing = () => {
                 </td>
                 <td>
                   <div className="d-flex gap-2">
-                    <button className="btn btn-outline-secondary btn-sm">
+                    <button
+                      className="btn btn-outline-secondary btn-sm"
+                      onClick={() => handleDownloadInvoice(inv)}
+                    >
                       <FaDownload />
                     </button>
                     <button className="btn btn-outline-dark btn-sm">

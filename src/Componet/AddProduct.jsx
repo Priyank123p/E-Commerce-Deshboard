@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./AddProduct.css";
 
 const AddProduct = () => {
+  const [quantity, setQuantity] = useState(0);
+
+  const handleIncrement = () => {
+    setQuantity(prev => prev + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(prev => prev - 1);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+
+    // Allow only numbers and prevent empty input
+    if (value === "") {
+      setQuantity("");
+    } else if (!isNaN(value)) {
+      const num = parseInt(value);
+      if (num >= 0) {
+        setQuantity(num);
+      }
+    }
+  };
+
+
   return (
     <div className="container py-4">
 
@@ -111,17 +138,27 @@ const AddProduct = () => {
             {/* Stock Quantity & Availability */}
             <div className="col-md-6">
               <label className="form-label fw-semibold">Stock Quantity</label>
-              <div className="input-group">
-                <button className="btn btn-outline-secondary" type="button">
+              <div className="input-group" style={{ width: "150px" }}>
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  onClick={handleDecrement}
+                >
                   −
                 </button>
+
                 <input
                   type="text"
                   className="form-control text-center"
-                  value="1"
-                  readOnly
+                  value={quantity}
+                  onChange={handleInputChange}
                 />
-                <button className="btn btn-outline-secondary" type="button">
+
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  onClick={handleIncrement}
+                >
                   +
                 </button>
               </div>

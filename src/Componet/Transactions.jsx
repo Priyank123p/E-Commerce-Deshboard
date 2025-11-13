@@ -54,9 +54,6 @@ const Transactions = () => {
                     <option value="15">Last 30 days</option>
                   </select>
                 </div>
-                <button className="btn btn-outline-secondary rounded-pill px-3">
-                  <i className="fa fa-upload me-2"></i> Export CSV
-                </button>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
-import "./Invoice.css"
+import "./Invoice.css";
 
 const Invoice = () => {
 
@@ -17,11 +17,6 @@ const Invoice = () => {
     { id: "#323542", customer: "Sarah Clark", creation: "December 10, 2027", due: "June 10, 2028", total: "$800", status: "Unpaid" },
   ];
 
-  const [filter, setFilter] = useState("All");
-
-  const filteredInvoices =
-    filter === "All" ? invoices : invoices.filter((inv) => inv.status === filter);
-
   return (
     <>
       <div className="container invoice-page">
@@ -32,11 +27,13 @@ const Invoice = () => {
           </Link>
         </div>
 
-        {/* Overview */}
+        {/* Overview Section */}
         <div className='card p-4 mb-4'>
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h5 className="fs-5">Overview</h5>
-            <Link to="/createinvoice"><button className="btn btn-primary btn-sm">+ Create an Invoice</button></Link>
+            <Link to="/createinvoice">
+              <button className="btn btn-primary btn-sm">+ Create an Invoice</button>
+            </Link>
           </div>
 
           <div className='d-flex flex-wrap gap-3'>
@@ -61,34 +58,10 @@ const Invoice = () => {
 
         {/* Table Section */}
         <div className="card p-4 shadow-sm">
-
-          <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <div>
-              <button
-                className={`btn btn-outline-primary btn-sm me-2 ${filter === "All" ? "active" : ""}`}
-                onClick={() => setFilter("All")}
-              >
-                All Invoices
-              </button>
-              <button
-                className={`btn btn-outline-secondary btn-sm me-2 ${filter === "Unpaid" ? "active" : ""}`}
-                onClick={() => setFilter("Unpaid")}
-              >
-                Unpaid
-              </button>
-              <button
-                className={`btn btn-outline-secondary btn-sm ${filter === "Draft" ? "active" : ""}`}
-                onClick={() => setFilter("Draft")}
-              >
-                Draft
-              </button>
-            </div>
-
-            <div className="d-flex align-items-center gap-2">
-              <input type="text" className="form-control form-control-sm" placeholder="Search..." />
-              <button className="btn btn-outline-secondary btn-sm">Filter</button>
-              <button className="btn btn-outline-secondary btn-sm">Export</button>
-            </div>
+          <div className="d-flex justify-content-end align-items-center mb-3 gap-2 flex-wrap">
+            <input type="text" className="form-control form-control-sm w-auto" placeholder="Search..." />
+            <button className="btn btn-outline-secondary btn-sm">Filter</button>
+            <button className="btn btn-outline-secondary btn-sm">Export</button>
           </div>
 
           {/* Table */}
@@ -104,8 +77,8 @@ const Invoice = () => {
               </tr>
             </thead>
             <tbody>
-              {filteredInvoices.length > 0 ? (
-                filteredInvoices.map((invoice, index) => (
+              {invoices.length > 0 ? (
+                invoices.map((invoice, index) => (
                   <tr key={index}>
                     <td>{invoice.id}</td>
                     <td>{invoice.customer}</td>
@@ -138,7 +111,7 @@ const Invoice = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Invoice
+export default Invoice;

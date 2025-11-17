@@ -68,7 +68,7 @@ const SingleInvoice = () => {
                         <h5>To</h5>
                         <h4>Albert Word</h4>
                         <p>355, Shobe Lane <br /> Colorado, Fort Collins - 80543</p>
-                        {/* <p>Due On: <br /><span>16 March, 2027</span></p> */}
+                        <p>Due On: <br /><span>16 March, 2027</span></p>
                     </div>
                 </div>
 

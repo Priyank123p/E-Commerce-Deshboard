@@ -28,7 +28,7 @@ const Billing = () => {
   return (
     <div className="container payment-page">
       <div className="d-flex justify-content-between align-items-center mb-4 billing-heading">
-        <h3>Add New Card</h3>
+        <h3>Billing</h3>
         <Link to="/" className="route-home">
           <button className="btn home-btn">Home</button>
         </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import "./DeshBoard.css";
 
 const DeshBoard = () => {
-  const percentage = 65.80;
+  const percentage = 85.94;
 
   return (
     <>

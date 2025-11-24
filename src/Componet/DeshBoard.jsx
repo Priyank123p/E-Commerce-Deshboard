@@ -21,14 +21,8 @@ const DeshBoard = () => {
             <span className="growth negative">↓ 9.05%</span>
           </div>
 
-          <div className="mothly-sales">
-            <p>Orders</p>
-            <h2>5,359</h2>
-            <span className="growth negative">↓ 9.05%</span>
-          </div>
-
           <div className="card-monthly target-card">
-            <h5>Monthly Target</h5>
+            <h3>Monthly Target</h3>
             <p className="text-muted small">Target you’ve set for each month</p>
 
             <div

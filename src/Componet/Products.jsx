@@ -123,7 +123,6 @@ const Products = () => {
             className="form-control search-input"
             placeholder="Search..."
           />
-          <button className="btn filter-btn">Filter</button>
         </div>
 
         <table className="table align-middle mt-3">

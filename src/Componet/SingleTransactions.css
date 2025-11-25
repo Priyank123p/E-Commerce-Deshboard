@@ -106,8 +106,8 @@
 }
 
 .invoice-table thead {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #f0efef;
+    color: black;
 }
 
 .invoice-table th,
@@ -118,11 +118,11 @@
 }
 
 .invoice-table tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .invoice-table tbody tr:hover {
-    background-color: #e9f4ff;
+    background-color: white;
     transition: background-color 0.2s ease-in-out;
 }
 

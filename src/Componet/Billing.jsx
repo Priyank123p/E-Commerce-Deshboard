@@ -104,7 +104,7 @@ const Billing = () => {
               <th>Price</th>
               <th>Plan</th>
               <th>Status</th>
-              <th>Action</th>
+              <th>Download</th>
             </tr>
           </thead>
           <tbody>
@@ -123,15 +123,12 @@ const Billing = () => {
                   </span>
                 </td>
                 <td>
-                  <div className="d-flex gap-2">
+                  <div>
                     <button
                       className="btn btn-outline-secondary btn-sm"
                       onClick={() => handleDownloadInvoice(inv)}
                     >
                       <FaDownload />
-                    </button>
-                    <button className="btn btn-outline-dark btn-sm">
-                      <FaEye />
                     </button>
                   </div>
                 </td>

@@ -15,7 +15,7 @@ const SingleInvoice = () => {
     ];
 
     const subTotal = products.reduce((sum, p) => sum + p.total, 0);
-    const vat = subTotal * 0.18;
+    const vat = subTotal * 0.20;
     const total = subTotal + vat;
 
     // FIXED: Works with the data above
@@ -36,7 +36,7 @@ const SingleInvoice = () => {
         });
 
         pdf.text(`Sub Total: $${subTotal.toFixed(2)}`, 20, yPos + 10);
-        pdf.text(`VAT (18%): $${vat.toFixed(2)}`, 20, yPos + 20);
+        pdf.text(`VAT (20%): $${vat.toFixed(2)}`, 20, yPos + 20);
         pdf.text(`Total: $${total.toFixed(2)}`, 20, yPos + 30);
 
         pdf.save("Invoice_348.pdf");
@@ -100,7 +100,7 @@ const SingleInvoice = () => {
 
                     <div className="d-flex flex-column align-items-end me-2 invoice-summary">
                         <p>Sub Total amount: <strong>${subTotal.toFixed(2)}</strong></p>
-                        <p>VAT (18%): <strong>${vat.toFixed(2)}</strong></p>
+                        <p>VAT (20%): <strong>${vat.toFixed(2)}</strong></p>
                         <h5 className="fw-bold mt-2">Total : ${total.toFixed(2)}</h5>
                     </div>
 

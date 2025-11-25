@@ -23,12 +23,14 @@ const SideBar = () => {
                     }`}
             >
                 <h2 className="text-center mb-4 border-bottom pb-2 fw-bold text-uppercase">
-                    <img
-                        src="https://react-demo.tailadmin.com/images/logo/logo.svg"
-                        alt="Logo"
-                        className="img-fluid"
-                        width="140"
-                    />
+                    <Link to="/">
+                        <img
+                            src="https://react-demo.tailadmin.com/images/logo/logo.svg"
+                            alt="Logo"
+                            className="img-fluid"
+                            width="140"
+                        />
+                    </Link>
                 </h2>
 
                 <nav>

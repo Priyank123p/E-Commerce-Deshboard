@@ -18,6 +18,18 @@ const SingleTransactions = () => {
 
   const [qty, setQty] = React.useState(1);
 
+  const handleViewReceipt = () => {
+    alert("Viewing Receipt...");
+  };
+
+  const handleRefund = () => {
+    const confirmRefund = window.confirm("Are you sure you want to refund?");
+    if (confirmRefund) {
+      alert("Refund processed!");
+    }
+  };
+
+
   return (
     <>
       <div className="container SingleTransactions-page">
@@ -35,9 +47,10 @@ const SingleTransactions = () => {
           </div>
           <div>
             <div className='SingleTransactions-button d-flex'>
-              <button>View Recepit</button>
-              <button>Refund</button>
+              <button onClick={handleViewReceipt}>View Receipt</button>
+              <button onClick={handleRefund}>Refund</button>
             </div>
+
           </div>
         </div>
 

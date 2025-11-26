@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./AddProduct.css";
+import { FiUploadCloud } from "react-icons/fi";
 
 const AddProduct = () => {
   const [quantity, setQuantity] = useState(0);
@@ -30,6 +31,13 @@ const AddProduct = () => {
     }
   };
 
+  // Upload File State
+  const [FileName, setFileName] = useState('');
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) setFileName(file.name);
+  };
 
   return (
     <div className="container py-4">
@@ -178,25 +186,28 @@ const AddProduct = () => {
       </div>
 
       {/* Product Images */}
-      <div className="card shadow-sm border-0 rounded-4 mb-4">
-        <div className="card-header bg-white border-bottom">
-          <h5 className="mb-0 fw-semibold">Products Images</h5>
-        </div>
-        <div className="card-body">
-          <div className="border border-2 border-dashed text-center py-5 rounded-4">
-            <div className="mb-2">
-              <i className="bi bi-upload fs-1 text-secondary"></i>
-            </div>
-            <p className="mb-1">
-              <strong>Click to upload</strong> or drag and drop SVG, PNG, JPG or
-              GIF (MAX. 800x400px)
-            </p>
+      <div className="Dropzone-section">
+        <h3 className="form-title">Dropzone</h3>
+
+        <div className="dropzone-box">
+          <div className="upload-icon">
+            <FiUploadCloud size={36} />
           </div>
+          <h4 className="drop-text">Drag & Drop Files Here</h4>
+          <p className="sub-text">
+            Drag and drop your PNG, JPG, WebP, SVG images here or browse
+          </p>
+          <label className="browse-file">
+            <input type="file" accept="image/*" onChange={handleFileUpload} />
+            Browse File
+          </label>
+
+          {FileName && <p className="file-name">Uploaded: {FileName}</p>}
         </div>
       </div>
 
       {/* Buttons */}
-      <div className="text-end">
+      <div className="text-end mt-3">
         <button className="btn btn-outline-secondary me-2 px-4">Draft</button>
         <button className="btn btn-primary px-4">Publish Product</button>
       </div>

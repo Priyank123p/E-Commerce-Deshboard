@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Billing.css";
-import { FaCcMastercard, FaCcVisa, FaPaypal, FaFilePdf, FaDownload, FaEye } from "react-icons/fa";
+import { FaCcMastercard, FaCcVisa, FaPaypal, FaFilePdf, FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import jsPDF from "jspdf";
 
